@@ -38,4 +38,4 @@ app.post("/api/reply", async (req, res) => {
 });
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, model: MODEL, keyConfigured: Boolean(process.env.OPENAI_API_KEY) }));
-app.listen(PORT, () => console.log(`eBay Customer Support AI: http://localhost:${PORT}`));
+app.listen(PORT, "0.0.0.0", () => console.log(`eBay Customer Support AI listening on ${PORT}`));
